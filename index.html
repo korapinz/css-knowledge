@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-weight: bolder;
+            font-style:italic;
+            font-family: monospace;
+            color:rgb(104, 88, 151)
+        }
+
+        h2{
+            color:rgb(255, 0, 115);
+            font-family: monospace;
+        }
+        .title{
+            font-family: monospace;
+        }
+        #title{
+            color:red;
+        }
+        p{
+            font-family: 'Sriracha', cursive;
+            font-size: medium;
+        }
+        div{
+            border-style:groove;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS & Selector คืออะไร</h1>
+        <h2>Selector คือ แท็ก HTML, ID และ Class ที่ต้องกำหนดคุณสมบัติ แบ่งออกเป็น 3 รูปแบบ</h2>
+        <p>Element Selector คือ การกำหนด style ให้แท็ก HTML โดยตรง</p>
+        <p>Class Selector คือ การกำหนด Style โดยใช้ชื่อ Class เป็น Selector โดยใช้เครื่องหมายจุด (.) <span style="color: rgb(9, 125, 63);">สามารถมีค่าซ้ำกันได้</span></p>
+        <p>ID Selector คือ การกำหนด style โดยระบุชื่อ ID เป็นรหัสเฉพาะของแท็กหลังเครื่องหมาย # โดย ID <span style="color: crimson;">ไม่สามารถกำหนดค่าซ้ำกันได้</span></p>
+    </div>
+
+    <div>
+        <h2>Declaration ใช้สำหรับกำหนดค่าให้กับ Selector ซึ่งมีส่วนประกอบอยู่ด้วยกัน 2 ส่วน คือ</h2>
+        <p>Property หรือ Attribute คือ คุณสมบัติที่ต้องการกำหนดให้กับ Selector</p>
+        <p>Value คือ ค่าที่กำหนดให้กับ Property หรือ Attribute</p>
+    </div>
+
+    <div>
+        <h2 class="title" id="title">selector { property : value; property:value... }</h2>
+        <h1>รูปแบบการประกาศใช้ CSS</h1>
+        <h2>Internal</h2><p>css อยู่ไฟล์เดียวกัน มี Inline (เขียนลงใน tag นั้นเลย) กับ Embeded (เขียนแบบใช้ selector)</p>
+        <h2>External</h2><p>แยกเป็นอีกไฟล์โดยมีนามสกุล .css เช่น style.css และทำการ import เข้ามาในไฟล์ html ของเราโดยการใช้ tag link (link rel='stylesheet' href="style.css")" </p>
+    </div>
+
+    <img src="./unit-css.jpg" alt="unit" height="400px">
+    <img src="./unit2-css.jpg" alt="unit" height="400px">
+
+    <div>
+        <h1>การกำหนดสี</h1>
+        <h2>color กำหนดได้ 4 รูปแบบ</h2>
+        <p>1.แบบปกติ color: red;</p>
+        <p>2.แบบ RGB rgb: rgb(red,green,blue), <span style="background-color: rgb(30%,20%,45%); color: white;">rgb(30%,20%,45%)</span></p>
+        <p>- rgb แบบมีความโปร่งใส rgba: rgb(red,green,blue,alpha), <span style="background-color:rgba(255,2,50,100) ; color: white;">rgba(255,2,50,100)</span></p>
+        <p>3.ฐาน 16 Hexadecimal: <span style="background-color:#000; color: white;"> #000</span> #FFF <span style="background-color:#EE82EE ;color: white;">#EE82EE</span></p>
+        <p>4.HSL ( hue,saturation,lightness ):  color:<span style="background-color:hsl(27,100%,50%) ; color: white;">hsl(27,100%,50%)</span> ค่าความสดใสของสี ค่าความเข้มข้นของสี</p>
+    </div>
+
+</body>
+</html>
