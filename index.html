@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <style>
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            line-height: 1.4em;
+        }
+
         h1{
             font-weight: bolder;
             font-style:italic;
@@ -23,37 +31,61 @@
             font-family: monospace;
         }
         #title{
-            color:red;
+            font-style:italic;
+            color:rgb(104, 88, 151)
         }
         p{
             font-family: 'Sriracha', cursive;
             font-size: medium;
         }
-        div{
-            border-style:groove;
-            margin: 10px;
+        .container{
+            width: 960px;
+            margin: 30px auto;
+        }
+ 
+        .box{
+            background-color: #c7dfe6;
+            border:2px solid #333;
             padding: 10px;
-            border-radius: 7px;
+            margin-bottom: 15px;
+            display: inline-block
+        }
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color:red
+        }
+        a:visited{
+            color: #0067cd;
+        }
+        a:hover{
+            text-decoration: underline;
+            background-color: rgb(181, 250, 255);
+        }
+        a:active{
+            background-color: rgb(0, 166, 255);
         }
     </style>
 </head>
 <body>
-    <div>
+<div class="container">
+    <div class="box" id="box-1" >
         <h1>CSS & Selector คืออะไร</h1>
+        <h2 id="title">selector { property : value; property:value... }</h2>
         <h2>Selector คือ แท็ก HTML, ID และ Class ที่ต้องกำหนดคุณสมบัติ แบ่งออกเป็น 3 รูปแบบ</h2>
         <p>Element Selector คือ การกำหนด style ให้แท็ก HTML โดยตรง</p>
         <p>Class Selector คือ การกำหนด Style โดยใช้ชื่อ Class เป็น Selector โดยใช้เครื่องหมายจุด (.) <span style="color: rgb(9, 125, 63);">สามารถมีค่าซ้ำกันได้</span></p>
         <p>ID Selector คือ การกำหนด style โดยระบุชื่อ ID เป็นรหัสเฉพาะของแท็กหลังเครื่องหมาย # โดย ID <span style="color: crimson;">ไม่สามารถกำหนดค่าซ้ำกันได้</span></p>
     </div>
 
-    <div>
+    <div class="box" id="box-2">
         <h2>Declaration ใช้สำหรับกำหนดค่าให้กับ Selector ซึ่งมีส่วนประกอบอยู่ด้วยกัน 2 ส่วน คือ</h2>
         <p>Property หรือ Attribute คือ คุณสมบัติที่ต้องการกำหนดให้กับ Selector</p>
         <p>Value คือ ค่าที่กำหนดให้กับ Property หรือ Attribute</p>
     </div>
 
-    <div>
-        <h2 class="title" id="title">selector { property : value; property:value... }</h2>
+    <div class="box" id="box-3">
         <h1>รูปแบบการประกาศใช้ CSS</h1>
         <h2>Internal</h2><p>css อยู่ไฟล์เดียวกัน มี Inline (เขียนลงใน tag นั้นเลย) กับ Embeded (เขียนแบบใช้ selector)</p>
         <h2>External</h2><p>แยกเป็นอีกไฟล์โดยมีนามสกุล .css เช่น style.css และทำการ import เข้ามาในไฟล์ html ของเราโดยการใช้ tag link (link rel='stylesheet' href="style.css")" </p>
@@ -63,14 +95,78 @@
     <img src="./unit2-css.jpg" alt="unit" height="400px">
 
     <div>
-        <h1>การกำหนดสี</h1>
-        <h2>color กำหนดได้ 4 รูปแบบ</h2>
-        <p>1.แบบปกติ color: red;</p>
-        <p>2.แบบ RGB rgb: rgb(red,green,blue), <span style="background-color: rgb(30%,20%,45%); color: white;">rgb(30%,20%,45%)</span></p>
+        <h1>การกำหนดสี ( color )</h1>
+        <h2>กำหนดได้ 4 รูปแบบ</h2>
+        <p>1. แบบปกติ color: red;</p>
+        <p>2. แบบ RGB rgb: rgb(red,green,blue), <span style="background-color: rgb(30%,20%,45%); color: white;">rgb(30%,20%,45%)</span></p>
         <p>- rgb แบบมีความโปร่งใส rgba: rgb(red,green,blue,alpha), <span style="background-color:rgba(255,2,50,100) ; color: white;">rgba(255,2,50,100)</span></p>
-        <p>3.ฐาน 16 Hexadecimal: <span style="background-color:#000; color: white;"> #000</span> #FFF <span style="background-color:#EE82EE ;color: white;">#EE82EE</span></p>
-        <p>4.HSL ( hue,saturation,lightness ):  color:<span style="background-color:hsl(27,100%,50%) ; color: white;">hsl(27,100%,50%)</span> ค่าความสดใสของสี ค่าความเข้มข้นของสี</p>
+        <p>3. ฐาน 16 Hexadecimal: <span style="background-color:#000; color: white;"> #000</span> #FFF <span style="background-color:#EE82EE ;color: white;">#EE82EE</span></p>
+        <p>4. HSL ( hue,saturation,lightness ):  color:<span style="background-color:hsl(27,100%,50%) ; color: white;">hsl(27,100%,50%)</span> ค่าความสดใสของสี ค่าความเข้มข้นของสี</p>
     </div>
 
+    <div>
+        <h1>การกำหนดขนาดข้อความ ( font-size )</h1>
+        <h2>กำหนดได้ 2 รูปแบบ</h2>
+        <p>1. แบบค่าคงที่: xx-small, x-small, medium, large, x-large, xx-large</p>
+        <p>2. แบบตัวเลข: 10px 20px ...</p>
+    </div>
+
+    <div>
+        <h1>การกำหนดความหนาข้อความ ( font-weight )</h1>
+        <h2>กำหนดได้ 2 รูปแบบ</h2>
+        <p>1. แบบค่าคงที่: lighter, bold, bolder, normal</p>
+        <p>2. แบบตัวเลข: 100, 200, ..., 800, 900</p>
+    </div>
+
+    <div>
+        <h1>การกำหนดลักษณะข้อความ ( text-decoration )</h1>
+        <h2>กำหนดได้ 4 รูปแบบ</h2>
+        <p>1. none: ไม่ขีดเส้น</p>
+        <p>2. underline: ขีดเส้นใต้</p>
+        <p>3. overline: ขีดเส้นเหนือข้อความ</p>
+        <p>4. line-through: ขีดเส้นทับข้อความ</p>
+    </div>
+
+    <div>
+        <h1>การจัดแนวข้อความ ( text-align )</h1>
+        <h2>กำหนดได้ 4 รูปแบบ</h2>
+        <p>1. left: ชิดซ้าย</p>
+        <p>2. right: ชิดขวา</p>
+        <p>3. center: อยู่ตรงกลาง</p>
+        <p>4. justify: กระจายข้อความยาวๆ ให้ทุกบรรทัดเท่ากัน</p>
+    </div>
+
+    <div> 
+        <h1>การกำหนดความกว้างและความสูง ( width & height )</h1>
+        <p>auto คือ browser จะกำหนดให้เอง</p>
+        <p>length คือ ความสูง/ความกล้างแบบหน่วยวัด เช่น px cm เป็นต้น</p>
+        <p>% คือ ความกว้างแบบ % ต่อหน้าจอ ( ยืดหยุ่น )</p>
+        <h2>เราสามารถกำหนดให้มีค่า max/min ของขอบเขตของค่านั้นๆได้ด้วยการใช้ max/min เช่น max-width: 200px</h2>
+    </div>
+
+    <div> 
+        <h1>การกำหนดเส้นขอบแบบภาพรวม ( border: <รูปแบบเส้น> <ขนาด> <สี> )</h1>
+        <p>รูปแบบเส้น: solid เส้นทึบ, dotted จุด, dashed เส้นปะ, double เส้นคู่</p>
+        <p>ขนาด: 10px</p>
+        <p>สี: blck</p>
+
+        <h2 style="color:rgb(91, 42, 165)">กำหนด style เส้นขอบ ( border-style: ชื่อเส้นขอบ )</h2>
+        <h2 style="color:rgb(91, 42, 165)">กำหนด color เส้นขอบ ( border-color: สี )</h2>
+        <h2 style="color:rgb(91, 42, 165)">กำหนด size เส้นขอบ ( border-width: ขนาด )</h2>
+        <h2 style="color:rgb(91, 42, 165)">กำหนด radius เส้นขอบ ( border-radius: ค่าความโค้ง มุมบนซ้าย, มุมบนขวา, มุมล่างขวา, มุมล่างซ้าย )</h2>
+    </div>
+
+    <div> 
+        <h1>การกำหนด style ให้กับ Link ( a:link )</h1>
+        <p>a:link กำหนด style ให้ลิงค์ที่ยังไม่ถูกคลิก</p>
+        <a href="https://www.google.com/">Google</a>
+        <p>a:hover กำหนด style ให้ลิงค์เมื่อนำเมาส์ไปวาง</p>
+        <a href="https://www.facebook.com/korapinz/">Facebook</a>
+        <p>a:visited กำหนด style ให้ลิงค์ที่ถูกคลิกแล้ว</p>
+        <a href="https://www.youtube.com/channel/UCiP-5HsDlZXDWbVcsNgx-IQ">Youtube</a>
+        <p>a:active กำหนด style ให้ลิงค์ขณะถูกคลิก</p>
+        <a href="#">Home</a>
+    </div>
+</div>
 </body>
 </html>
